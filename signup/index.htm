@@ -1,0 +1,82 @@
+<style>
+a{
+    color: red;
+    text-decoration: none;
+    font-family: Arial;
+    
+}
+
+.manage{
+    margin-top: 200px;
+    max-width: 400px;
+}
+ 
+ .hideel{
+  visibility: hidden; 
+  display: none;
+ }
+
+ 
+
+</style>
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html" />
+    <title>Signup</title>
+    <script src="../dist/build/react.js"></script>
+    <script src="../dist/build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+	 
+ 
+</head>
+
+<body>
+ 
+<div id="container" class="container text-center">
+        <nav id="menuhead"></nav>
+        <div id="datafrmid" class="manage" >
+             
+        </div>
+
+</div>
+
+<script type="text/babel" src="../components/signup.js">
+</script>
+
+<script>
+ 
+
+window.addEventListener("click", function (e) {	
+	e = e || window.event;
+    e = e.target || e.srcElement;
+    if (e.id === 'currid') {
+        //alert(e.id);
+        document.getElementById('firstfld').style.display = "none";
+        document.getElementById('sndfld').style.display = "block";
+    } 
+     if (e.id === 'sndid') {
+        //alert(e.id);
+        document.getElementById('firstfld').style.display = "none";
+        document.getElementById('sndfld').style.display = "none";
+        document.getElementById('trdfld').style.display = "block";
+    } 
+    
+        if (e.id === 'fstbckid') {
+        //alert(e.id);
+        document.getElementById('firstfld').style.display = "block";
+        document.getElementById('sndfld').style.display = "none";
+        document.getElementById('trdfld').style.display = "none";
+    } 
+     if (e.id === 'thrdidbck') {
+        //alert(e.id);
+        document.getElementById('firstfld').style.display = "none";
+        document.getElementById('sndfld').style.display = "block";
+        document.getElementById('trdfld').style.display = "none";
+    } 
+    
+}, false);
+
+</script>
+</body>
+</html>
